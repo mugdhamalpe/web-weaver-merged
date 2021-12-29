@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web Weaver</title>
+    <link rel="shortcut icon" type="image/png" href="images/pisb-favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="css/addpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/index.css">
+    <!-- <link rel="stylesheet" href="css/home.css"> -->
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+
+   <nav>
+    <input id="nav-toggle" type="checkbox">
+    <div class="logo" style="font-family: 'Poppins', sans-serif;">Web <strong style="font-family: 'Poppins', sans-serif; color: #407BFF;"> Weaver</strong></div>
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="posts.html">Posts</a></li>
+      <li><a href="addpost.html">Add posts</a></li>
+      <li><a href="#">Register</a></li>
+    </ul>
+    <label for="nav-toggle" class="icon-burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+  </nav>
+   
+
+      <div class="container">
+        <span class="big-circle"></span>
+        <img src="img/shape.png" class="square" alt="" />
+        <div class="form">
+          <div class="contact-info">
+            <!-- <h1 class="title">Upload your images here...</h1> -->
+
+            <div class="info">
+              <div class="upload">
+                <div class="upload-files">
+                <header>
+                  <p>
+                  <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                  <span class="up" style="font-family: 'Poppins', sans-serif;">Up</span>
+                  <span class="load" style="font-family: 'Poppins', sans-serif;">load</span>
+                  </p>
+                </header>
+                <div class="body" id="drop">
+                  <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i><br><br>
+                  <!-- <p style="font-size: 22px;" class="pointer-none"><b>Drag and drop</b> <span style="color: white;">files here </span><br /><h3 style="font-size: 22px; color: white;">OR</h3> -->
+                    <a style="background-color: #2A48A8; color: white; padding: 8px; border-radius: 1rem; text-decoration: none; font-size: 22px;" href="" id="triggerFile">click here</a><span style="font-size: 22px; color: white;"> to upload</span></p>
+                    <input type="file" multiple="multiple" accept="image/x-png,image/jpeg,image/jpg"/>
+                </div>
+                <footer>
+                  <div class="divider">
+                  <span style="font-family: 'Poppins', sans-serif; font-size: 22px; color: white;"><AR>FILES</AR></span>
+                  </div>
+                  <div class="list-files">
+                  </div>
+                    <button style="font-family: 'Poppins', sans-serif; font-weight: 700;" class="importar">UPDATE FILES</button>
+                </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <form action="index.html" autocomplete="off">
+              <h1 class="title" style="font-size: 22px; font-weight: 700;">Enter info</h1><br>
+              <div class="input-container">
+                <input style="line-height: 25px;font-size: 15px;" type="text" name="name" class="input" />
+                <label style="font-size: 15px;" for="">Name</label>
+                <span style="font-size: 15px;">Name</span>
+              </div>
+              <br>
+              <div class="input-container">
+                <input style="line-height: 25px; font-size: 15px;" type="email" name="email" class="input" />
+                <label style="font-size: 15px;" for="">Website heading</label>
+                <span style="font-size: 15px;">Website heading</span>
+              </div>
+              <br>
+              <div class="input-container">
+                <input style="line-height: 25px; font-size: 15px;" type="tel" name="phone" class="input" />
+                <label style="font-size: 15px;" for="">Website link</label>
+                <span style="font-size: 15px;">Website link</span>
+              </div>
+              <br>
+              <div class="input-container textarea">
+                <textarea style="line-height: 25px; font-size: 15px;" name="message" class="input"></textarea>
+                <label style="font-size: 15px;" for="">Website Description</label>
+                <span style="font-size: 15px;">Website Description</span>
+              </div>
+              <input style="font-size: 22px;" type="submit" value="Submit" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-left col-md-4 col-sm-6">
+       <p style="color: white; font-family: 'Poppins', sans-serif;">© PICT IEEE Student Branch</p>
+        
+      </div>
+      <div class="footer-center col-md-4 col-sm-6">
+        <div style="color: white; font-family: 'Poppins', sans-serif;">
+          <!-- <i class="fa fa-map-marker"></i> -->
+          &copy; Web Weaver | Made with ❤️ by <a href="" style="color: white; font-family: 'Poppins', sans-serif;"">PISB Web Team</a>
+        </div>
+      </div>
+      <div class="footer-right col-md-4 col-sm-6">
+        <div class = "social-links">
+          <a href = "#" style="color: white;"><i class = "fab fa-linkedin-in"></i></a>
+          <a href = "#" style="color: white;"><i class = "fab fa-youtube"></i></a>
+          <a href = "#" style="color: white;"><i class = "fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- <footer>
+      <div class="leftieee">
+        <h3 style="justify-content: left;">© PICT IEEE Student Branch</h3>
+      </div>
+      <div class="middleieee">
+        &copy; Web Weaver | Made with ❤️ by <a href="">PISB Web Team</a>
+      </div>
+      <div class="lastieee">
+        <div class = "social-links">
+  
+          <a href = "#"><i class = "fab fa-linkedin-in"></i></a>
+          <a href = "#"><i class = "fab fa-youtube"></i></a>
+          <a href = "#"><i class = "fab fa-instagram"></i></a>
+    
+        </div>
+      </div>
+  
+    </footer> -->
+    <!-- end of footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      ScrollReveal().reveal('.box');
+    </script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/final.js"></script>
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = ()=>{
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      }
+      cancelBtn.onclick = ()=>{
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      }
+      window.onscroll = ()=>{
+        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+      }
+    </script>
+  </body>
+</html>
