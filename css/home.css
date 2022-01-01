@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 .body {
   scroll-behavior: smooth;
-  background: #ffffff;
 }
 .navbar {
   background-color: transparent;
@@ -25,13 +23,13 @@
 }
 .webweaver .headingname{
   width: max-content;
-  margin-top: 15%;
+  margin-top: 12%;
   margin-left: 5%;
   color: white;
 }
-.webweaver .headingname p{
+.webweaver .headingname .titlename{
   font-size: 80px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 .svgs{
   padding-top: 5%;
@@ -41,7 +39,7 @@
 }
 
 .glow-on-hover {
-  width: 220px;
+  width: 150px;
   height: 50px;
   border: none;
   outline: none;
@@ -51,12 +49,12 @@
   position: relative;
   z-index: 0;
   border-radius: 10px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .glow-on-hover:before {
   content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background: purple;
   position: absolute;
   top: -2px;
   left:-2px;
@@ -109,7 +107,7 @@
   font-weight: 500;
   color: white;
   /* font-family: "Righteous", cursive; */
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 .introduction .container,
 .instructions .container {
@@ -132,7 +130,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: white;
   text-shadow: 0 0 3px #fff, 0 0 3px #0033cc;
   /* font-family: "Righteous", cursive; */
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 .instructions {
   height: 100vh;
@@ -141,7 +139,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   font-weight: 500;
   color: white;
   /* font-family: "Righteous", cursive; */
-  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 }
 .introduction h1{
   text-align: right;
@@ -149,9 +147,23 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .instructions h1{
   padding-left: 5%;
 }
+.introduction .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.div{
+  width: 60%;
+}
 .paragraph {
   text-align: right;
+  padding-left: 5%;
   font-family: 'Poppins', sans-serif;
+}
+
+.introduction .container img{
+  width: 400px;
+  padding-bottom: 10%;
 }
 .paragraph_instructions {
   display: flex;
@@ -169,6 +181,9 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 .instructionsvg{
   width: 400px;
 }
+.links{
+  margin-top: 5%;
+}
 @media (max-width: 992px) {
   .introduction,
   .instructions{
@@ -181,23 +196,31 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   }
   .headingname .links{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    column-gap: 5px;
+    
   }
   .paragraph_instructions{
     display: flex;
     flex-direction: column;
   }
   .headingname .links button{
-    margin-top: 5px;
-    font-family: 'Playfair Display', serif;
+    /* margin-top: 5px; */
+    font-family: 'Poppins', sans-serif;
+    /* width: 50%; */
   }
 }
 @media (max-width: 768px) {
   .introduction {
     height: max-content;
   }
+  .headingname .links{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20%;
+  }
   .svgs img{
-    width: 400px
+    width: 350px
   };
   .introduction .container,
   .instructions .container {
@@ -210,25 +233,39 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   .instructionsvg img{
     width: 300px;
   }
-  
+  .introduction .container img{
+    display: none;
+  }
+  .introduction .container .div{
+    width: 100%;
+  }
+  .paragraph{
+    width: 100%;
+  }
+  .headingname p{
+    /* width: 100%; */
+  }
+  .webweaver .headingname .titlename{
+    font-size: 70px;
+  }
 }
 @media (max-width: 600px) {
   .webweaver{
     background-image: url(/images/Website\ Creator-amico.svg);
     background-repeat: no-repeat;
-    background-position: 5%;
+    /* background-position: 5%; */
     background-size: 33%;
     background-position-x: 90%;
-    background-position-y: 10%;
+    background-position-y: 8%;
+    display: flex;
+
+    justify-content: start;
   }
   .webweaver .headingname{
     width: min-content;
   }
   .headingname .links{
-    padding-top: 20%;
-  }
-  .webweaver .headingname p{
-    font-size: 80px;
+    /* padding-top: 20%; */
   }
   
   .svgs{
@@ -246,145 +283,3 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     width: 90%;
   }
 }
-
-/* navbar styling */
-:root{
-  --color-1: #2f3240;
-}
-/* body{
-font-family: sans-serif;
-background-color: #e8eef3;
-} */
-*{
-  box-sizing: border-box;
-  margin:0;
-  padding:0;
-}
-ul{
-  list-style: none;
-}
-a{
-  text-decoration: none;
-}
-.container{
-  max-width: 1170px;
-  margin:auto;
-}
-.row{
-display: flex;
-flex-wrap: wrap;
-}
-.align-items-center{
-align-items: center;
-}
-.justify-content-between{
-justify-content: space-between;
-}
-/*header*/
-.header{
-background-color: var(--color-1);
-padding: 12px 0;
-line-height: 1.5;
-}
-
-.header .logo,
-.header .nav{
-padding:0 15px;
-}
-.header .logo a{
-font-size: 30px;
-color: #ffffff;
-text-transform: capitalize;
-}
-.header .nav ul li{
-display: inline-block;
-margin-left: 40px;
-}
-.header .nav ul li a{
-display: block;
-font-size: 16px;
-text-transform: capitalize;
-color: #ffffff;
-padding: 10px 0;
-transition: all 0.5s ease;
-}
-.header .nav ul li a.active,
-.header .nav ul li a:hover{
-color: #f3a93d;
-}
-.nav-toggler{
-height: 34px;
-width: 44px;
-background-color: #ffffff;
-border-radius: 4px;
-cursor: pointer;
-border:none;
-display: none;
-margin-right: 15px;
-}
-.nav-toggler:focus{
-outline: none;
-box-shadow: 0 0 15px rgba(255,255,255,0.5);
-}
-.nav-toggler span{
-  height: 2px;
-  width: 20px;
-  background-color: var(--color-1);
-  display: block;
-  margin:auto;
-  position: relative;
-  transition: all 0.3s ease;
-}
-.nav-toggler.active span{
-background-color: transparent;
-}
-.nav-toggler span::before,
-.nav-toggler span::after{
-content: '';
-position: absolute;
-left:0;
-top:0;
-width: 100%;
-height: 100%;
-background-color: var(--color-1);
-transition: all 0.3s ease;
-}
-.nav-toggler span::before{
-transform: translateY(-6px);
-}
-.nav-toggler.active span::before{
-transform: rotate(45deg);
-}
-.nav-toggler span::after{
-transform: translateY(6px);
-}
-.nav-toggler.active span::after{
-transform: rotate(135deg);
-}
-@media(max-width:991px){
- .nav-toggler{
-   display: block;
- }
- .header .nav{
-   width: 100%;
-   padding:0;
-   max-height: 0px;
-   overflow: hidden;
-   visibility: hidden;
-   transition: all 0.5s ease;
- }
- .header .nav.open{
-   visibility: visible;
- }
- .header .nav ul{
-   padding:12px 15px 0;
-   margin-top: 12px;
-   border-top:1px solid rgba(255,255,255,0.2);
- }
- .header .nav ul li{
-   display: block;
-   margin:0;
- }
-}
-
-
