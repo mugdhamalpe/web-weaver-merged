@@ -1,0 +1,109 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Serif&family=Lemonada:wght@300&family=Oranienbaum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Serif&family=Lemonada:wght@300&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Serif&family=Lemonada:wght@300&family=Merriweather:wght@300&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&family=Poppins:wght@300&family=Secular+One&display=swap");
+
+body {
+  background: #1b1b9d;
+  background: radial-gradient(circle, #121269 0%, #1d1b31 100%);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white !important;
+}
+.w-75 {
+  width: 80% !important;
+}
+.card {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white !important;
+}
+.card-title {
+  font-family: "Poppins", sans-serif;
+}
+.fas{
+ color: white;
+}
+.card-text {
+  font-family: "Poppins", sans-serif;
+}
+.text-end {
+  font-family: "Poppins", sans-serif;
+}
+a:hover {
+  text-decoration: underline;
+  font-weight: 1.3rem;
+}
+
+/* pagiantion */
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pages{
+  /* background-color: white; */
+  background: rgb(187 184 196 / 97%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+  /* color: white !important; */
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid rgb(7, 6, 6);
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #3e14d8;
+  color: white;
+  /* border: 1px solid #4CAF50; */
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+@media (min-width: 576px) {
+  .card-img-top {
+    height: 400px;
+  }
+}
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 300px;
+  }
+}
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 200px;
+  }
+  .container {
+    padding-left: 0px;
+  }
+}
