@@ -22,11 +22,12 @@ hr {
   background-color: white;
   width: 80%;
 }
-
+.navbar-collapse{
+  justify-content: end;
+}
 .nav-link {
   font-family: "Poppins", sans-serif;
   color: white;
-  
 }
 .nav-link:hover,
 .navbar-brand:hover {

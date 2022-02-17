@@ -30,7 +30,7 @@ function uploadFile(name){
     let fileSize;
     // if file size is less than 1024 then add only KB else convert this KB into MB
     (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024*1024)).toFixed(2) + " MB";
-    let progressHTML = `<li class="row">
+    let progressHTML = <li class="row">
                           <i class="fas fa-file-alt"></i>
                           <div class="content">
                             <div class="details">
@@ -41,13 +41,13 @@ function uploadFile(name){
                               <div class="progress" style="width: ${fileLoaded}%"></div>
                             </div>
                           </div>
-                        </li>`;
+                        </li>;
     // uploadedArea.innerHTML = ""; //uncomment this line if you don't want to show upload history
     uploadedArea.classList.add("onprogress");
     progressArea.innerHTML = progressHTML;
     if(loaded == total){
       progressArea.innerHTML = "";
-      let uploadedHTML = `<li class="row">
+      let uploadedHTML = <li class="row">
                             <div class="content upload">
                               <i class="fas fa-file-alt"></i>
                               <div class="details">
@@ -56,7 +56,7 @@ function uploadFile(name){
                               </div>
                             </div>
                             <i class="fas fa-check"></i>
-                          </li>`;
+                          </li>;
       uploadedArea.classList.remove("onprogress");
       // uploadedArea.innerHTML = uploadedHTML; //uncomment this line if you don't want to show upload history
       uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML); //remove this line if you don't want to show upload history

@@ -1,7 +1,7 @@
 //selecting all required elements
 const dropArea = document.querySelector(".drag-area"),
 dragText = dropArea.querySelector("header"),
-button = dropArea.querySelector("button"),
+button = dropArea.querySelector(".input-button"),
 input = dropArea.querySelector("input");
 let file; //this is a global variable and we'll use it inside multiple functions
 
@@ -55,3 +55,32 @@ function showFile(){
     dragText.textContent = "Drag & Drop to Upload File";
   }
 }
+
+$('#imageInput').on('change', function() {
+	input = $(this);
+	if($input.val().length > 0) {
+		fileReader = new FileReader();
+		fileReader.onload = function (data) {
+		$('.image-preview').attr('src', data.target.result);
+		}
+		fileReader.readAsDataURL($input.prop('files')[0]);
+		$('.image-button').css('display', 'none');
+		$('.image-preview').css('display', 'block');
+		$('.change-image').css('display', 'block');
+	}
+});
+						
+$('.change-image').on('click', function() {
+	$control = $(this);			
+	$('#imageInput').val('');	
+	$preview = $('.image-preview');
+	$preview.attr('src', '');
+	$preview.css('display', 'none');
+	$control.css('display', 'none');
+	$('.image-button').css('display', 'block');
+});
+
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};

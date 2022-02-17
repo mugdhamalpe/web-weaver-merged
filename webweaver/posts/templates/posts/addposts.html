@@ -68,10 +68,10 @@
           <div class="contact-info">
             <div class="drag-area">
               <i class="fas fa-cloud-upload-alt" style="color: white; font-size: 5rem; margin-top: 20px;"></i>
-              <header style="padding: 20px; text-align: center;">Drag & Drop to Upload File</header>
-              <span>OR</span>
+              <header style="padding: 20px; text-align: center;">Choose files</header>
               <!-- <button type="button">Browse File</button> -->
-              <input multiple="single" accept="image/*" type="file" name="picture"  />
+              <img id="output"/>
+              <input id="input-button" multiple="single" accept="image/*" type="file" onchange="loadFile(event)" name="picture"  />
               <br><br>
             </div>
           </div>
@@ -79,8 +79,6 @@
           <div class="contact-form">
             <span class="circle one"></span>
             <span class="circle two"></span>
-
-            
               <h1 class="title" style="font-size: 22px; font-weight: 600; font-family: 'Poppins', sans-serif;">Enter info</h1><br>
               <div class="input-container">
                 <input style="line-height: 25px;font-size: 15px;" type="text" name="title" class="input" required/>
@@ -141,5 +139,15 @@
     <!-- <script src="js/main.js"></script> -->
     <script src={% static 'final.js' %}></script>
     <script src={% static 'script.js' %}></script>
+    <script>
+      var loadFile = function(event) {
+        var reader = new FileReader();
+        reader.onload = function(){
+          var output = document.getElementById('output');
+          output.src = reader.result;
+        };
+        reader.readAsDataURL(event.target.files[0]);
+      };
+    </script>
   </body>
 </html>
