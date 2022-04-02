@@ -22,7 +22,30 @@
 <body style="background-color:grey;">
 
     <!-- code for navbar -->
-    <nav class="navbar navbar-expand-lg ">
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title" style="font-family: 'Poppins', sans-serif;">
+          Web weaver
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      
+      <div class="nav-links" style="font-family: 'Poppins', sans-serif; font-weight: 200;">
+        <a href="">Home</a>
+        <a href="">About Us</a>
+        <a href="">Services</a>
+        <a href="">Blogs</a>
+        <a href="">Contact Us</a>
+      </div>
+    </div>
+    <!-- <nav class="navbar navbar-expand-lg ">
       <a style="padding:0px" class="navbar-brand" href="{{path_to_home}}"><img src={% static 'web (1).png' %} alt="" height="50px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +88,7 @@
           </ul>
     
         </div>
-      </nav>
+      </nav> -->
 
     <!-- post -->
     <div class="container-fluid">
