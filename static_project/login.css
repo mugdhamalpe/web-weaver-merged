@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 .body,html{
     padding: 0;
     margin: 0;
@@ -70,6 +71,7 @@
 }
 
 footer {
+    font-family: "Poppins", sans-serif;
     color: #fff;
     text-align: center;
     padding: 0.4rem 0;
@@ -78,11 +80,14 @@ footer {
     /* border-top: solid 1px white; */
     justify-content: space-evenly!important;
     justify-content: space-between;
-    background-color: #010718;
+    background: transparent!important;
+    font-weight: 400!important;
   }
   footer .leftieee,
   footer .middleieee {
     padding-top: 5px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400!important;
   }
   footer .social-links {
     display: flex;
@@ -302,14 +307,15 @@ label span:before {
 }
 
 .footer {
-  background: linear-gradient(45deg, #19638b, #011722);
   color: #fff;
   text-align: center;
   padding: 10px;
   display: flex;
+  font-size: 15px;
   flex-direction: row;
   /* border-top: solid 1px white; */
-  justify-content: space-evenly;
+  justify-content: space-evenly!important;
+  justify-content: space-between;
   width: 100%;
   position: fixed;
   left: 0;
@@ -344,6 +350,7 @@ label span:before {
 
 .social-links a:hover {
   color: white;
+  background-color: #11101d;
 }
 
 .footer span {
